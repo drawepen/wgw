@@ -1,0 +1,99 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>中国象棋</title>
+<script src="https://www.chhblog.com/upload/1/files/games/chinesechess-1.0-beta/base.js" type="text/javascript"></script>
+<script src="https://www.chhblog.com/upload/1/files/games/chinesechess-1.0-beta/moveGenerator.js" type="text/javascript"></script>
+<script src="https://www.chhblog.com/upload/1/files/games/chinesechess-1.0-beta/evaluation.js" type="text/javascript"></script>
+<script src="https://www.chhblog.com/upload/1/files/games/chinesechess-1.0-beta/searchEngine.js" type="text/javascript"></script>
+<script src="https://www.chhblog.com/upload/1/files/games/chinesechess-1.0-beta/UI.js" type="text/javascript"></script>
+<link href="https://www.chhblog.com/upload/1/files/games/chinesechess-1.0-beta/style.css" rel="stylesheet" type="text/css">
+<style type="https://www.chhblog.com/upload/1/files/games/chinesechess-1.0-beta/text/css">
+.transform{
+	transform:rotate(180deg);
+}
+.transform td{
+	transform:rotate(180deg);
+}
+</style>
+</head>
+<body>
+
+<div class="board transform" id="board">
+   <!-- <table cellspacing='0' cellpadding='0' border='0'>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>-->
+</div>
+<div class="op">
+电脑等级:
+<select id="level">
+    <option value="1">1级</option>
+    <option value="2">2级</option>
+    <option value="3">3级</option>
+    <option value="4">4级</option>
+</select>
+&nbsp;&nbsp;
+开局:
+<input name="start" id="start_1" type="radio" checked="" value="1">
+<label for="start_1">对手先行</label>
+<input name="start" id="start_2" type="radio" value="0">
+<label for="start_2">我方先行</label>
+&nbsp;&nbsp;
+<input class="ipt" id="btn" type="button" value="开始下棋">
+<p>注意：3、4两个级别请用IE9以上版本、google chrome、firefox等浏览器进行游戏 </p>
+</div>
+
+
+<script>
+/*
+var testBoard = [
+    [ 0, 0, 0, 0, 1, 0, 0, 0, 0],
+    [ 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [ 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [ 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [ 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [ 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [ 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [ 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [ 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [ 0, 0, 0, 0, 8, 0, 0, 0, 0]
+]*/
+
+
+/*var e = new Evaluation();
+var value = e.eval( testBoard, 0 );
+console.log( value )*/
+
+//var engine = new SearchEngine( 2 );
+//var value = engine.getGoodMove( testBoard );
+
+var cc = new ChineseChessUI( 'board' );
+
+function start() {
+  var levelEls = document.getElementById( 'level' );
+  var startEls = document.getElementsByName( 'start' );
+  var level;
+  var start;
+  for (var i = 0; i < 2; i++) {
+      if( startEls[ i ].checked ) start = startEls[ i ].value;
+  };
+
+  level = levelEls.value;
+  cc.start( level, start );
+}
+
+document.getElementById( 'btn' ).onclick = start;
+
+</script>  
+
+
+</body></html>
+

@@ -1,0 +1,115 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="css/DDZ_css.css" rel="stylesheet" type="text/css" media="all">
+
+</head>
+
+<body onLoad="Initialise()" >
+<table width="90%" border=4 class=OneTable id=ddztable>
+  <tr style='mso-yfti-firstrow: yes; '>
+      <td colspan="2" rowspan="2" height="130"><p id='Show_information' style="font-size: 64px;" ></p> </td>
+    <td width="4%" height="50" >
+    <p id='count_choice_num' align="center"></p>
+      <!--textarea readonly="readonly";多行文本域-->
+      </td>
+    <td width="26%" >&nbsp;</td>
+  </tr>
+  <tr style='mso-yfti-firstrow:yes;height:80px'>
+  <td colspan="2" rowspan="2" ><div id=output_information>
+        <p></p>
+    </div></td>
+  </tr>
+ <tr class="TrOne">
+   <td colspan="2">
+   <table width="98%" height="210px" border="0" style="position: relative;text-align: center; text-valign: center; table-layout: fixed;">
+     <tr>
+       <td onMouseUp="click_readUP(0)"><img src="images/DDZ_0.jpg" id=readimg0 class='Image_choic' onMouseDown="click_readDown(0)" ></td>
+       <td onMouseUp="click_readUP(1)" ><img src="images/DDZ_1.jpg" id=readimg1 class='Image_choic' onMouseDown="click_readDown(1)"></td>  <!--<div>无法控制高宽-->
+       <td onMouseUp="click_readUP(2)"><img src="images/DDZ_2.jpg" id=readimg2 class='Image_choic' onMouseDown="click_readDown(2)" ></td>
+       <td onMouseUp="click_readUP(3)"><img src="images/DDZ_3.jpg" id=readimg3 class='Image_choic' onMouseDown="click_readDown(3)" ></td>
+       <td onMouseUp="click_readUP(4)"><img src="images/DDZ_4.jpg" id=readimg4 class='Image_choic' onMouseDown="click_readDown(4)" ></td>
+       <td onMouseUp="click_readUP(5)"><img src="images/DDZ_5.jpg" id=readimg5 class='Image_choic' onMouseDown="click_readDown(5)" ></td>
+       <td onMouseUp="click_readUP(6)"><img src="images/DDZ_6.jpg" id=readimg6 class='Image_choic' onMouseDown="click_readDown(6)" ></td>
+       <td onMouseUp="click_readUP(7)"><img src="images/DDZ_7.jpg" id=readimg7 class='Image_choic' onMouseDown="click_readDown(7)" ></td>
+   </table>
+   <table width="98%" height="210px" border="0" style="position: relative; top: 10px; text-align: center; text-valign: center; table-layout: fixed;">
+     <tr >
+       <td onMouseUp="click_readUP(8)"><img src="images/DDZ_8.jpg" id=readimg8 class='Image_choic' onMouseDown="click_readDown(8)" ></td>
+       <td onMouseUp="click_readUP(9)"><img src="images/DDZ_9.jpg" id=readimg9 class='Image_choic' onMouseDown="click_readDown(9)" ></td>
+       <td onMouseUp="click_readUP(10)"><img src="images/DDZ_10.jpg" id=readimg10 class='Image_choic' onMouseDown="click_readDown(10)" ></td>
+       <td onMouseUp="click_readUP(11)"><img src="images/DDZ_11.jpg" id=readimg11 class='Image_choic' onMouseDown="click_readDown(11)" ></td>
+       <td onMouseUp="click_readUP(12)"><img src="images/DDZ_12.jpg" id=readimg12 class='Image_choic' onMouseDown="click_readDown(12)" ></td>
+       <td onMouseUp="click_readUP(13)"><img src="images/DDZ_13.jpg" id=readimg13 class='Image_choic' onMouseDown="click_readDown(13)" ></td>
+       <td onMouseUp="click_readUP(14)"><img src="images/DDZ_14.jpg" id=readimg14 class='Image_choic' onMouseDown="click_readDown(14)" ></td>
+       <td>
+       <table width="100%" height="100px" border="0">
+         <tr>
+           <td rowspan="3"><button class=tx_button onClick="Information_main(0)" style="height:130px;font-size:28px">确认→</button></td>
+           <td><button class=tx_button onClick="Information_main(1)" style="height:50px;background-color:#CC6600">地主→</button></td>
+         </tr>
+         <tr>
+           <td><button class=tx_button onClick="Information_main(2)" style="height:50px;background-color:#CC9933">下家→</button></td>
+         </tr>
+         <tr>
+           <td><button class=tx_button onClick="Information_main(3)" style="height:50px;background-color:#CCCC33">上家→</button></td>
+         </tr>
+         <tr>
+           <td><button class=tx_button onClick="clear_read()" style="height:60px;">←<br>清空</button></td>
+           <td><button class=tx_button onClick="" style="height:60px;">撤回→</button></td>
+         </tr>
+       </table></td>
+     </tr>
+   </table></td>
+  </tr>
+ <tr class="TrTwo" >
+  <td width="29%">
+	<input type=text id=txt_information class='relative_left002' onKeyDown="if(event.keyCode==13) Information_main(0)" oninput="Show_read()">
+    <input type=button value='输入回车可提交；按shift点击图片可取消选择' class='relative_left002' onClick='Information_main(0)'>
+	
+	</td>
+  <td colspan="3">
+  <table class='relative_left002' border=2 width=96%  style="text-align:center">
+      <!-- ？？？？设置width=96%放在style外管用，内部不管用-->
+      <tr height=30px>
+        <td class='count_width'>大王</td>
+        <td class='count_width'>小王</td>
+        <td class='count_width'>2</td>
+        <td class='count_width'>1</td>
+        <td class='count_width'>K</td>
+        <td class='count_width'>Q</td>
+        <td class='count_width'>J</td>
+        <td class='count_width'>10</td>
+        <td class='count_width'>9</td>
+        <td class='count_width'>8</td>
+        <td class='count_width'>7</td>
+        <td class='count_width'>6</td>
+        <td class='count_width'>5</td>
+        <td class='count_width'>4</td>
+        <td class='count_width'>3</td>
+      </tr>
+      <tr height=30px>
+        <td class='count_width'><p id='count_14'></p></td>
+        <td class='count_width'><p id='count_13'></p></td>
+        <td class='count_width'><p id='count_12'></p></td>
+        <td class='count_width'><p id='count_11'></p></td>
+        <td class='count_width'><p id='count_10'></p></td>
+        <td class='count_width'><p id='count_9'></p></td>
+        <td class='count_width'><p id='count_8'></p></td>
+        <td class='count_width'><p id='count_7'></p></td>
+        <td class='count_width'><p id='count_6'></p></td>
+        <td class='count_width'><p id='count_5'></p></td>
+        <td class='count_width'><p id='count_4'></p></td>
+        <td class='count_width'><p id='count_3'></p></td>
+        <td class='count_width'><p id='count_2'></p></td>
+        <td class='count_width'><p id='count_1'></p></td>
+        <td class='count_width'><p id='count_0'></p></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</body>
+<script src="js/DDZ_js.js" type="text/javascript"></script>
+</html>
+

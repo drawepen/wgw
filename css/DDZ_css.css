@@ -1,0 +1,107 @@
+<!--
+button.tx_button{
+	position: relative;
+	color: rgba(255,255,255,1);
+	text-decoration: none;
+	background-color: rgba(219,87,5,1);
+	font-weight: 600;
+	font-size: 18px;
+	display: block;
+	padding: 4px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+	-moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+	box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+	width: 60px;
+	/*margin: 100px auto;*/
+	text-align: center;
+	-webkit-transition: all .1s ease;
+	-moz-transition: all .1s ease;
+	-ms-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	transition: all .1s ease;
+}
+
+button.tx_button:active {
+    -webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    -moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    position: relative;
+    top: 6px;
+}	
+table.OneTable{
+	font-size:20pt;
+	width:90%;
+	position: relative;
+ 	left: 5%;
+	table-layout:fixed;
+	text-valign:center;
+}
+
+ td.count_width{
+	width:6%
+ }
+ .relative_left002{
+	position: relative;
+  	 left: 2%;
+ }
+ input#txt_information{
+ 	width:200pt;
+	font-size:15pt;
+	valign:center ;
+ }
+ #output_information{
+	position:relative;
+	top:-10px;
+	height:575px;
+	width:98%;
+	text-valign:down;
+	overflow:auto;
+	!--background-color: green;-- 
+ }
+ p#id=outp1{
+	font-size:12px;
+ }
+ p.p_red{
+	color:red;
+	font-size:24px;
+ }
+ p.p_small{
+	font-size:18px;
+ }
+ tr.TrOne{
+	 mso-yfti-irow: 1; 
+	 mso-yfti-lastrow: yes; 
+	 height: 450px;
+	 overflow-y: auto;
+	 
+ }
+ tr.TrTwo{
+	 mso-yfti-irow: 1; 
+	 mso-yfti-lastrow: yes; 
+	 height: 50px; 
+	 overflow-y: auto;
+ }
+ td.TdOne{
+	margin-top:10px; 
+ }
+ 
+ img.Image_choic{
+	height:168px;
+	width:121px;
+ }
+  img.Image_choic:hover /*鼠标移上事件*/
+  {
+	height:196px;
+	width:142px;
+	position: relative;
+	z-index:1;
+	left:-10px;
+ }
+  img.Image_choic:active{/*鼠标按下事件*/
+	height:151px;
+	width:109px;
+ }
+ -->
